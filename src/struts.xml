@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- Action -->
+	<package name="lunwen186" extends="struts-default" namespace="/">
+		<global-results>
+			<result name="succeed">/common/succeed.jsp</result>
+			<result name="msg">/common/msg.jsp</result>
+		</global-results>
+		<action name="upload" class="com.util.upload" method="upload">
+			<result name="success">/upload/upload_re.jsp</result>
+		</action>
+		<action name="admin!*" class="com.action.AdminAction" method="{1}">
+			<result name="toadd">/admin/admin/admin_add.jsp</result>
+			<result name="toedit">/admin/admin/admin_edit.jsp</result>
+			<result name="list">/admin/admin/admin_list.jsp</result>
+						<result name="userloginsucc">/admin/index1.jsp</result>
+			<result name="userloginfail">/userlogin.jsp</result>
+		</action>
+		<action name="gonggao!*" class="com.action.GonggaoAction"
+			method="{1}">
+			<result name="toadd">/admin/gonggao/gonggao_add.jsp</result>
+			<result name="toedit">/admin/gonggao/gonggao_edit.jsp</result>
+			<result name="list">/admin/gonggao/gonggao_list.jsp</result>
+		</action>
+		<action name="user!*" class="com.action.UserAction" method="{1}">
+			<result name="toadd">/admin/user/user_add.jsp</result>
+			<result name="toedit">/admin/user/user_edit.jsp</result>
+			<result name="list">/admin/user/user_list.jsp</result>
+		</action>
+		<action name="shuifeijiage!*" class="com.action.ShuifeijiageAction"
+			method="{1}">
+			<result name="toadd">/admin/shuifeijiage/shuifeijiage_add.jsp</result>
+			<result name="toedit">/admin/shuifeijiage/shuifeijiage_edit.jsp
+			</result>
+			<result name="list">/admin/shuifeijiage/shuifeijiage_list.jsp
+			</result>
+		</action>
+		<action name="shuibiao!*" class="com.action.ShuibiaoAction"
+			method="{1}">
+			<result name="toadd">/admin/shuibiao/shuibiao_add.jsp</result>
+			<result name="toedit">/admin/shuibiao/shuibiao_edit.jsp</result>
+			<result name="list">/admin/shuibiao/shuibiao_list.jsp</result>
+		</action>
+		<action name="shoufei!*" class="com.action.ShoufeiAction"
+			method="{1}">
+			<result name="toadd">/admin/shoufei/shoufei_add.jsp</result>
+			<result name="toedit">/admin/shoufei/shoufei_edit.jsp</result>
+			<result name="list">/admin/shoufei/shoufei_list.jsp</result>
+			<result name="toshow">/admin/shoufei/shoufei_show.jsp</result>
+		</action>
+		<action name="quyu!*" class="com.action.QuyuAction" method="{1}">
+			<result name="toadd">/admin/quyu/quyu_add.jsp</result>
+			<result name="toedit">/admin/quyu/quyu_edit.jsp</result>
+			<result name="list">/admin/quyu/quyu_list.jsp</result>
+		</action>
+		<action name="jiesuantype!*" class="com.action.JiesuantypeAction"
+			method="{1}">
+			<result name="toadd">/admin/jiesuantype/jiesuantype_add.jsp</result>
+			<result name="toedit">/admin/jiesuantype/jiesuantype_edit.jsp</result>
+			<result name="list">/admin/jiesuantype/jiesuantype_list.jsp</result>
+		</action>		
+		<action name="database!*" class="com.action.DatabaseAction" method="{1}">
+		</action>		
+	</package>
+</struts>
